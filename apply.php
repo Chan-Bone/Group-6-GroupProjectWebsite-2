@@ -7,28 +7,13 @@
     <meta name="author" content="Some Company">
     <title>Nameless Company</title>
     <link rel="stylesheet" href="styles/unified.css">
-
 </head>
 
 <body>
-    <header class="top-header">
-        <div class="logo-container">
-            <img src="styles/images/Gemini_Generated_Image_w46ji5w46ji5w46j-removebg-preview.png" alt="Prius Logo">
-        </div>
-        <div class="header-text">
-            <h1>PRIUS</h1>
-            <p>Enhancing our Digital Lifestyle</p>
-        </div>
-    </header>
+    <?php include 'header.inc'; ?>
 
-    <section class="hero">
-        <nav class="navbar">
-            <a href="index.html">Home</a> |
-            <a href="service.html">Our Services</a> |
-            <a href="apply.html">Job Openings</a> |
-            <a href="apply.html">Join Us</a> |
-            <a href="about.html">About PRIUS</a>
-        </nav>
+    <section class="hero" style="height: auto; min-height: 100px;">
+        <?php include 'nav.inc'; ?>
     </section>
 
     <form class="apply-form" method="post" action="https://mercury.swin.edu.au/it000000/formtest.php">
@@ -38,38 +23,17 @@
             <fieldset id="job_reference_number">
                 <label for="job_reference_number">Job reference number</label>
                 <br>
-                <input 
-                    type="text" 
-                    name="job_reference_number" 
-                    id="job_reference_number" 
-                    required="required" 
-                    pattern="[0-9]{5}" 
-                    title="Enter exactly 5 alphanumeric characters"
-                >
+                <input type="text" name="job_reference_number" id="job_reference_number" required="required" pattern="[0-9]{5}" title="Enter exactly 5 alphanumeric characters">
             </fieldset>
             
             <fieldset id="first_name">
                 <label for="first_name">First Name</label>
-                <input 
-                    type="text" 
-                    name="first_name" 
-                    id="first_name"
-                    required="required" 
-                    pattern="[a-zA-Z]{1,20}" 
-                    title="Enter at most 20 alpha characters"
-                >
+                <input type="text" name="first_name" id="first_name" required="required" pattern="[a-zA-Z]{1,20}" title="Enter at most 20 alpha characters">
             </fieldset>
             
             <fieldset id="last_name">
                 <label for="last_name">Last Name</label>
-                <input 
-                    type="text" 
-                    name="last_name" 
-                    id="last_name" 
-                    required="required" 
-                    pattern="[a-zA-Z]{1,20}" 
-                    title="Enter at most 20 alpha characters"
-                >
+                <input type="text" name="last_name" id="last_name" required="required" pattern="[a-zA-Z]{1,20}" title="Enter at most 20 alpha characters">
             </fieldset>
         </div>
         
@@ -80,7 +44,6 @@
             </fieldset>
             
             <div>
-                
                 <label>Gender</label>
                 <fieldset id="gender">
                     <p>
@@ -92,7 +55,6 @@
                         
                         <input type="radio" id="unknown_gender" name="gender" value="unknown_gender">
                         <label for="unknown_gender">Rather not say</label> 
-                        
                     </p>
                 </fieldset>
             </div>
@@ -103,32 +65,17 @@
                 <p>
                     <label for="street_address">Street Address</label>
                     <br>
-                    <input 
-                        type="text" 
-                        name="street_address" 
-                        id="street_address" 
-                        required="required" 
-                        pattern="[a-zA-Z]{1,40}" 
-                        title="Enter at most 40 alpha characters"
-                    >
+                    <input type="text" name="street_address" id="street_address" required="required" pattern="[a-zA-Z]{1,40}" title="Enter at most 40 alpha characters">
                 </p>
             </fieldset>
         </div>
         
-
         <div class="row-threes">
             <fieldset id="suburb_town">
                 <p>
                     <label for="suburb_town">Suburb / Town</label> 
                     <br>
-                    <input 
-                        type="text" 
-                        name="suburb_town" 
-                        id="suburb_town" 
-                        required="required" 
-                        pattern="[a-zA-Z]{1,40}" 
-                        title="Enter at most 40 alpha characters"
-                    >
+                    <input type="text" name="suburb_town" id="suburb_town" required="required" pattern="[a-zA-Z]{1,40}" title="Enter at most 40 alpha characters">
                 </p>
             </fieldset>
 
@@ -159,9 +106,7 @@
             </fieldset>
         </div>
             
-        
         <div class="row-half">
-
             <fieldset id="email">
                 <p>
                     <label for="email">Email</label>
@@ -177,33 +122,26 @@
                     <input type="text" name="phone_number" id="phone_number" required="required" pattern="[0-9]{8,12}" title="Enter a phone number between 8 to 12 digits, without dashes ( - )">
                 </p>
             </fieldset>
-
         </div>
 
         <div class="row-skill">
             <fieldset id="skill">
-                <p>
-                    <label>Skill list</label>
-                </p>
+                <p><label>Skill list</label></p>
                 <p>
                     <input type="checkbox" id="web_development" name="skill[]" value="web_development" checked="checked">
                     <label for="web_development">Web Development</label> 
-                    
                 </p>
                 <p>
                     <input type="checkbox" id="data_analytics" name="skill[]" value="data_analytics">
                     <label for="data_analytics">Data Analytics</label> 
-                    
                 </p>
                 <p>
                     <input type="checkbox" id="accounting" name="skill[]" value="accounting">
                     <label for="accounting">Accounting</label> 
-                    
                 </p>
                 <p>
                     <input type="checkbox" id="project_management" name="skill[]" value="project_management">
                     <label for="project_management">Project Management</label> 
-                    
                 </p>
                 <p>
                     <input type="checkbox" id="other_skills" name="skill[]" value="other_skills">
@@ -214,12 +152,7 @@
             <fieldset id="other_skill">
                 <label>Other skills</label>
                 <br>
-                <textarea 
-                    id="other_skill" 
-                    name="other_skill" 
-                    rows="9" 
-                    placeholder="(OPTIONAL) Other skills goes here..."
-                ></textarea>
+                <textarea id="other_skill" name="other_skill" rows="9" placeholder="(OPTIONAL) Other skills goes here..."></textarea>
             </fieldset>
         </div>
 
@@ -229,16 +162,8 @@
             <input type="reset" value="Reset Form">
             <p></p>
         </div>
-        
     </form>
 
-    <footer style="background-color: #003399; color: white; text-align: center; padding: 20px; font-size: 0.95rem; width: 100%;">
-        <p style="margin: 0 0 10px 0;">&copy; 2026 Prius - Government IT Services. All Rights Reserved.</p>
-        <p style="margin: 0;">
-            <a href="https://cos10026wm.atlassian.net/jira/software/projects/GROUP/boards/34?atlOrigin=eyJpIjoiZTRjOWE0MDNjZTk0NDYyMWE3NGNkM2RlM2RlMTA2NjEiLCJwIjoiaiJ9" style="color: #d1f3f4; text-decoration: none; margin: 0 10px;">Jira Board</a> | 
-            <a href="https://github.com/rllysadkeanu/GroupProject-" style="color: #d1f3f4; text-decoration: none; margin: 0 10px;">GitHub Repository</a> | 
-            <a href="mailto:info@prius.com" style="color: #d1f3f4; text-decoration: none; margin: 0 10px;">info@prius.com</a>
-        </p>
-    </footer>
+    <?php include 'footer.inc'; ?>
 </body>
 </html>

@@ -27,24 +27,10 @@
 </head>
 <body>
 
-    <header class="top-header">
-        <div class="logo-container">
-            <img src="styles/images/Gemini_Generated_Image_w46ji5w46ji5w46j-removebg-preview.png" alt="Prius Logo">
-        </div>
-        <div class="header-text">
-            <h1>PRIUS</h1>
-            <p>Enhancing our Digital Lifestyle</p>
-        </div>
-    </header>
+    <?php include 'header.inc'; ?>
 
     <section class="hero" style="height: auto; min-height: 100vh; padding-bottom: 50px;">
-        <nav class="navbar">
-            <a href="index.html">Home</a> |
-            <a href="service.html">Our Services</a> |
-            <a href="job-descriptions.html">Job Openings</a> |
-            <a href="apply.html">Join Us</a> |
-            <a href="about.html">About PRIUS</a>
-        </nav>
+        <?php include 'nav.inc'; ?>
 
         <div class="form-container">
             <h2 style="font-size: 2.2rem; margin-bottom: 20px; text-align: center; color: #003399;">Our Digital IT Services</h2>
@@ -69,13 +55,6 @@
         </div>
     </section>
 
-    <footer style="background-color: #003399; color: white; text-align: center; padding: 20px; font-size: 0.95rem; width: 100%;">
-        <p style="margin: 0 0 10px 0;">&copy; 2026 Prius - Government IT Services. All Rights Reserved.</p>
-        <p style="margin: 0;">
-            <a href="https://cos10026wm.atlassian.net/jira/software/projects/GROUP/boards/34?atlOrigin=eyJpIjoiZTRjOWE0MDNjZTk0NDYyMWE3NGNkM2RlM2RlMTA2NjEiLCJwIjoiaiJ9" style="color: #d1f3f4; text-decoration: none; margin: 0 10px;">Jira Board</a> | 
-            <a href="https://github.com/rllysadkeanu/GroupProject-" style="color: #d1f3f4; text-decoration: none; margin: 0 10px;">GitHub Repository</a> | 
-            <a href="mailto:info@prius.com" style="color: #d1f3f4; text-decoration: none; margin: 0 10px;">info@prius.com</a>
-        </p>
-    </footer>
+    <?php include 'footer.inc'; ?>
 </body>
 </html>
