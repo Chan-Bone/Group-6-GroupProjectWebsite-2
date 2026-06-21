@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 21, 2026 at 05:29 AM
+-- Generation Time: Jun 21, 2026 at 04:12 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -47,7 +47,15 @@ CREATE TABLE `eoi` (
   `last_name` varchar(50) NOT NULL,
   `email` varchar(100) NOT NULL,
   `phone` varchar(15) NOT NULL,
-  `status` enum('New','Current','Final') DEFAULT 'New'
+  `status` enum('New','Current','Final') DEFAULT 'New',
+  `date_of_birth` date NOT NULL,
+  `gender` varchar(20) NOT NULL,
+  `street_address` varchar(100) NOT NULL,
+  `suburb_town` varchar(50) NOT NULL,
+  `state` varchar(20) NOT NULL,
+  `postcode` varchar(4) NOT NULL,
+  `skills` text DEFAULT NULL,
+  `other_skill` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
